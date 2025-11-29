@@ -1,6 +1,6 @@
-use serde_json::json;
 use jsonptr_lite::{ptr, ptr_mut};
-/*    
+use serde_json::json;
+/*
 #[test]
 fn mutate_paths() {
     // change nested object value by pointer
@@ -31,9 +31,9 @@ fn escapes_supported() {
 #[test]
 fn invalid_cases() {
     let v = json!({"a":1});
-    assert!(ptr(&v, "a").is_none());      // missing leading slash
-    assert!(ptr(&v, "/~").is_none());     // bad escape
-    assert!(ptr(&v, "/a/0").is_none());   // descend into non-container
+    assert!(ptr(&v, "a").is_none()); // missing leading slash
+    assert!(ptr(&v, "/~").is_none()); // bad escape
+    assert!(ptr(&v, "/a/0").is_none()); // descend into non-container
 }
 
 #[test]
@@ -50,4 +50,3 @@ fn mutate_paths() {
     *ptr_mut(&mut v, "/items/1").unwrap() = json!(9);
     assert_eq!(ptr(&v, "/items/1").and_then(|x| x.as_i64()), Some(9));
 }
-

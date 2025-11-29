@@ -1,6 +1,6 @@
 //! # Mutate JSON with JSON Pointer example shows how to mutate a JSON value using a JSON Pointer.
-use serde_json::{json, Value};
 use jsonptr_lite::{ptr, ptr_mut};
+use serde_json::{json, Value};
 
 fn main() {
     //change nested object value by pointer

@@ -1,5 +1,5 @@
-use serde_json::{json, Value};
 use jsonptr_lite::ptr;
+use serde_json::{json, Value};
 
 fn main() {
     // show basic object path
@@ -15,5 +15,3 @@ fn main() {
     println!("{}", ptr(&v, "/a~1b").and_then(Value::as_i64).unwrap()); // 7
     println!("{}", ptr(&v, "/x~0y").and_then(Value::as_i64).unwrap()); // 9
 }
-
-

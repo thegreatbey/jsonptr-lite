@@ -1,6 +1,6 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
-use serde_json::json;
 use jsonptr_lite::ptr;
+use serde_json::json;
 
 //measure lookup cost for a nested path with an array index
 fn bench_ptr(c: &mut Criterion) {

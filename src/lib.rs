@@ -36,10 +36,6 @@
 //! assert_eq!(ptr(&v, "/a/b").and_then(Value::as_i64), Some(42));
 use serde_json::Value;
 
-
-
-
-
 /// Lookup a JSON value by JSON Pointer (RFC 6901).
 ///
 /// - empty string `""` returns the input `value`
@@ -183,5 +179,3 @@ mod tests {
         assert!(ptr(&v, "/a/0").is_none()); // descending into non-container
     }
 }
-
-
