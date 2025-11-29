@@ -1,0 +1,18 @@
+[package]
+name = "jsonptr-lite"
+version = "0.1.1"
+edition = "2021"
+description = "Tiny JSON Pointer lookups for serde_json::Value"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/thegreatbey/jsonptr-lite"
+homepage = "https://github.com/thegreatbey/jsonptr-lite"
+keywords = ["json", "pointer", "serde", "serde_json", "rfc6901"]
+categories = ["parsing", "data-structures"]
+
+[dependencies]
+serde_json = "1"
+
+[dev-dependencies]
+criterion = "0"
+
